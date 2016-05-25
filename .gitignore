@@ -1,0 +1,14 @@
+#*
+*.sublime-*
+*~
+.#*
+.project
+.settings
+**/.idea/
+**/*.iml
+/workdir/
+/cellar-fuzz.zip
+.DS_Store
+coverage.out
+*.test
+tags
