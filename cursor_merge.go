@@ -55,10 +55,10 @@ func newMergeCursor(reader *reader) *mergeCursor {
 
 func (c *mergeCursor) Seek(seek []byte) (key []byte, value []byte, deleted bool) {
 	for i, cursor := range c.mutationsCursors {
-		c.key[i], c.val[i] = cursor.Seek(key)
+		c.key[i], c.val[i] = cursor.Seek(seek)
 	}
 	for i, cursor := range c.deletionsCursors {
-		c.dkey[i], _ = cursor.Seek(key)
+		c.dkey[i], _ = cursor.Seek(seek)
 	}
 	c.updateCurr()
 	if c.currIsDel {

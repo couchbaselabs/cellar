@@ -54,7 +54,7 @@ func newCursor(reader *reader) *Cursor {
 // Seek moves the cursor to the specified key
 func (c *Cursor) Seek(seek []byte) (key []byte, value []byte) {
 	for i, cursor := range c.mutationsCursors {
-		c.key[i], c.val[i] = cursor.Seek(key)
+		c.key[i], c.val[i] = cursor.Seek(seek)
 	}
 	c.updateCurr()
 	for c.checkCurrDeleted() {
