@@ -6,6 +6,8 @@ An experimental KV store, which implements an LSM on top of [Bolt](https://githu
 
 **EXPERIMENTAL** – the API is evolving and the implementation is new
 
+[![Build Status](https://travis-ci.org/couchbaselabs/cellar.svg?branch=master)](https://travis-ci.org/couchbaselabs/cellar)
+
 ## High Level Concept
 
 - Data coming into Cellar is batched.  Each batch is written out to its own Bolt segment.
