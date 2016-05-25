@@ -9,8 +9,8 @@ script:
 - go test -v -race
 - go vet
 - errcheck -ignoretests
-#- go test -coverprofile=profile.out -covermode=count
-#- goveralls -service=travis-ci -coverprofile=profile.out -repotoken $COVERALLS
+- go test -coverprofile=profile.out -covermode=count
+- goveralls -service=travis-ci -coverprofile=profile.out -repotoken $COVERALLS
 notifications:
   email:
   - marty.schoch@gmail.com
