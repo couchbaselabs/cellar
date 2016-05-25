@@ -7,6 +7,10 @@ An experimental KV store, which implements an LSM on top of [Bolt](https://githu
 **EXPERIMENTAL** – the API is evolving and the implementation is new
 
 [![Build Status](https://travis-ci.org/couchbaselabs/cellar.svg?branch=master)](https://travis-ci.org/couchbaselabs/cellar)
+[![Coverage Status](https://coveralls.io/repos/github/couchbaselabs/cellar/badge.svg?branch=master)](https://coveralls.io/github/couchbaselabs/cellar?branch=master)
+[![GoDoc](https://godoc.org/github.com/couchbaselabs/cellar?status.svg)](https://godoc.org/github.com/couchbaselabs/cellar)
+[![codebeat badge](https://codebeat.co/badges/cb2bcac1-10c9-492a-bffe-abd0e179a16b)](https://codebeat.co/projects/github-com-couchbaselabs-cellar)
+[![Go Report Card](https://goreportcard.com/badge/github.com/couchbaselabs/cellar)](https://goreportcard.com/report/github.com/couchbaselabs/cellar)
 
 ## High Level Concept
 
