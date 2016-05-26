@@ -37,12 +37,12 @@ var rootKeyName = []byte("root")
 
 // Options let you change configurable behavior within the cellar
 type Options struct {
-	automaticMerge bool
+	AutomaticMerge bool
 }
 
 // DefaultOptions give the standard cellar behavior
 var DefaultOptions = &Options{
-	automaticMerge: true,
+	AutomaticMerge: true,
 }
 
 // Cellar is a merged-multi-segment(bolt) k/v store
@@ -172,7 +172,7 @@ func Open(path string, options *Options) (*Cellar, error) {
 		}
 	}
 
-	rv.mergeManager = newMergeManager(rv, &SimpleMergePolicy{}, options.automaticMerge, 2)
+	rv.mergeManager = newMergeManager(rv, &SimpleMergePolicy{}, options.AutomaticMerge, 2)
 	err = rv.mergeManager.Start()
 	if err != nil {
 		return nil, err
