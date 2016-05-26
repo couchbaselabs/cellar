@@ -19,7 +19,7 @@ import (
 )
 
 var testOptionsNoAutoMerge = &Options{
-	automaticMerge: false,
+	AutomaticMerge: false,
 }
 
 func TestMerge(t *testing.T) {
