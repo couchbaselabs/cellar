@@ -44,10 +44,12 @@ func newSegmentBuilder(cellarPath string, seq uint64) (*segmentBuilder, error) {
 	if err != nil {
 		return nil, fmt.Errorf("newSegmentBuilder CreateBucketIfNotExists '%s': %v", mutationsBucketName, err)
 	}
+	mutations.FillPercent = 1.0
 	deletions, err := tx.CreateBucketIfNotExists(deletionsBucketName)
 	if err != nil {
 		return nil, fmt.Errorf("newSegmentBuilder CreateBucketIfNotExists '%s': %v", deletionsBucketName, err)
 	}
+	deletions.FillPercent = 1.0
 	metadata, err := tx.CreateBucketIfNotExists(metaBucketName)
 	if err != nil {
 		return nil, fmt.Errorf("newSegmentBuilder CreateBucketIfNotExists '%s': %v", metaBucketName, err)
